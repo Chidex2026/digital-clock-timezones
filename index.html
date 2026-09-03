@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Global Time Zones</h1>
+        <p class="subtitle">Real-time clock across the world</p>
+        
+        <div class="controls">
+            <input type="text" id="timezone-input" placeholder="Enter timezone (e.g., America/New_York)" class="timezone-input">
+            <button onclick="addTimezone()" class="add-btn">Add Timezone</button>
+            <button onclick="resetClocks()" class="reset-btn">Reset</button>
+        </div>
+
+        <div class="clocks-container" id="clocks-container">
+            <!-- Clocks will be dynamically inserted here -->
+        </div>
+
+        <div class="timezone-list">
+            <h3>Common Timezones:</h3>
+            <div class="timezone-suggestions">
+                <span class="tz-tag" onclick="quickAdd('America/New_York')">New York</span>
+                <span class="tz-tag" onclick="quickAdd('Europe/London')">London</span>
+                <span class="tz-tag" onclick="quickAdd('Europe/Paris')">Paris</span>
+                <span class="tz-tag" onclick="quickAdd('Asia/Tokyo')">Tokyo</span>
+                <span class="tz-tag" onclick="quickAdd('Asia/Dubai')">Dubai</span>
+                <span class="tz-tag" onclick="quickAdd('Australia/Sydney')">Sydney</span>
+                <span class="tz-tag" onclick="quickAdd('Asia/Singapore')">Singapore</span>
+                <span class="tz-tag" onclick="quickAdd('America/Los_Angeles')">Los Angeles</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
